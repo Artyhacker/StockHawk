@@ -43,7 +43,7 @@ public final class PrefUtils {
         Set<String> stocks = getStocks(context);
         int stocksNum = stocks.size();
         if (add) {
-            stocks.add(symbol);
+            stocks.add(symbol.toUpperCase());
             if (stocksNum == stocks.size()) {
                 Toast.makeText(context, R.string.toast_stock_already_exists, Toast.LENGTH_LONG).show();
                 PrefUtils.removeStock(context, symbol);
