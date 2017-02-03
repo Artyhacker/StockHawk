@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">股票雄鹰</string>
+
+    <string name="pref_stocks_initialized_key" translatable="false">initialized</string>
+
+    <string name="pref_stocks_key">stocks</string>
+
+
+    <string name="pref_display_mode_key">displayMode</string>
+    <string name="pref_display_mode_default">@string/pref_display_mode_percentage_key</string>
+
+    <string name="pref_display_mode_absolute_key">absolute</string>
+    <string name="pref_display_mode_percentage_key">percentage</string>
+
+    <string name="default_stocks_yahoo">YHOO</string>
+    <string name="default_stocks_apple">AAPL</string>
+    <string name="default_stocks_microsoft">MSFT</string>
+    <string name="default_stocks_facebook">FB</string>
+
+
+    <string name="action_change_units">@string/pref_display_mode_key</string>
+
+
+    <string name="dialog_title">添加股票</string>
+    <string name="dialog_hint">股票代号 (如 GOOG)</string>
+    <string name="dialog_cancel">取消</string>
+    <string name="dialog_add">添加</string>
+
+    <string name="error_no_network">无网络连接！将在网络可用时加载股票。</string>
+    <string name="error_no_stocks">未添加股票！请点击右下悬浮按钮添加一支股票。</string>
+
+    <string name="toast_stock_added_no_connectivity">股票代号 %s 已添加，将在网络可用时刷新。</string>
+    <string name="toast_no_connectivity">无网络连接，将在网络可用时刷新。</string>
+    <string name="toast_stock_already_exists">该股票已存在！</string>
+    <string name="toast_symbol_error">股票代号错误，请核实！</string>
+    <string name="toast_price_update_failed">价格更新失败，请检查网络连接！</string>
+    <string name="error_database_empty">数据库为空，数据下载中...</string>
+
+</resources>
