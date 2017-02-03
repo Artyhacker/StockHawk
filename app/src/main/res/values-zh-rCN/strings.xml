@@ -36,4 +36,13 @@
     <string name="toast_price_update_failed">价格更新失败，请检查网络连接！</string>
     <string name="error_database_empty">数据库为空，数据下载中...</string>
 
+    <string name="description_stocks_list">股票列表</string>
+    <string name="description_add_stock_button">添加股票按钮</string>
+    <string name="description_error_message">错误提示信息</string>
+    <string name="description_tock_symbol_dialog">股票代号输入框</string>
+    <string name="description_stock_symbol">股票代号</string>
+    <string name="description_stock_price">股票价格</string>
+    <string name="description_stock_change">价格变化</string>
+
+
 </resources>

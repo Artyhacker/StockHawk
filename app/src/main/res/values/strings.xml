@@ -36,4 +36,12 @@
     <string name="toast_price_update_failed">Price update failed, please check network!</string>
     <string name="error_database_empty">Database is empty, please wait...</string>
 
+    <string name="description_stocks_list">Stocks list</string>
+    <string name="description_add_stock_button">Add Stock button</string>
+    <string name="description_error_message">Error message</string>
+    <string name="description_tock_symbol_dialog">Stock symbol dialog</string>
+    <string name="description_stock_symbol">Stock symbol</string>
+    <string name="description_stock_price">Stock price</string>
+    <string name="description_stock_change">Price change</string>
+
 </resources>
