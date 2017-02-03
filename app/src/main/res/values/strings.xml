@@ -33,5 +33,7 @@
     <string name="toast_no_connectivity">Will refresh when network available.</string>
     <string name="toast_stock_already_exists">The stock already exists!</string>
     <string name="toast_symbol_error">Stock symbol error!</string>
+    <string name="toast_price_update_failed">Price update failed, please check network!</string>
+    <string name="error_database_empty">Database is empty, please wait...</string>
 
 </resources>

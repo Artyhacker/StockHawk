@@ -145,10 +145,14 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
         if (data.getCount() != 0) {
             error.setVisibility(View.GONE);
+            if (!networkUp()) {
+                Toast.makeText(getApplicationContext(), R.string.toast_price_update_failed,
+                        Toast.LENGTH_LONG).show();
+            }
         } else {
             if (networkUp()) {
                 error.setVisibility(View.VISIBLE);
-                error.setText("Database is empty, please wait...");
+                error.setText(R.string.error_database_empty);
             }
         }
         adapter.setCursor(data);
