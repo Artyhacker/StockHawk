@@ -30,7 +30,7 @@
             android:id="@+id/widget_empty"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="No Stock Information"/>
+            android:text="@string/no_stock_data"/>
 
     </FrameLayout>
 

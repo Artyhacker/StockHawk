@@ -23,15 +23,18 @@
 
     <style name="WidgetSymbolTextStyle">
         <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#FFF</item>
         <item name="android:textAllCaps">true</item>
     </style>
 
     <style name="WidgetPriceTextStyle">
         <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#FFF</item>
     </style>
 
     <style name="WidgetChangeTextStyle">
         <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#FFF</item>
     </style>
 
 </resources>

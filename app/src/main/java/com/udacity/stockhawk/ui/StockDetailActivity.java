@@ -60,12 +60,19 @@ public class StockDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail);
         mContext = this;
 
-        Intent intent = getIntent();
-        String symbol = intent.getStringExtra("symbol");
-
         lineChart = (LineChartView) findViewById(R.id.chart);
         tvDes = (TextView) findViewById(R.id.detail_point_describe);
 
+        String symbol = getIntent().getStringExtra("symbol");
+
+        if (symbol != null) {
+            drawChart(symbol);
+        }
+
+        lineChart.setOnValueTouchListener(new ValueTouchListener());
+    }
+
+    private void drawChart(String symbol) {
         Uri uri = Contract.Quote.makeUriForStock(symbol);
 
         Cursor cursor = getContentResolver().query(uri, null, null, null, null);
@@ -95,7 +102,6 @@ public class StockDetailActivity extends AppCompatActivity {
             cursor.close();
         }
 
-        lineChart.setOnValueTouchListener(new ValueTouchListener());
     }
 
     private void initLineChart() {

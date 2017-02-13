@@ -55,6 +55,7 @@
         , 价格: $
         <xliff:g id = "price">%.2f</xliff:g>
     </string>
+    <string name="no_stock_data">无股票数据</string>
 
 
 </resources>

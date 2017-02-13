@@ -21,7 +21,6 @@ import java.util.Locale;
 
 public class WidgetRemoteViewsService extends RemoteViewsService {
 
-    private final String TAG = "RemoteViewsService";
     private DecimalFormat dollarFormatWithPlus;
     private DecimalFormat dollarFormat;
     @Override
@@ -77,13 +76,6 @@ public class WidgetRemoteViewsService extends RemoteViewsService {
                 dollarFormat = (DecimalFormat) NumberFormat.getCurrencyInstance(Locale.US);
                 dollarFormatWithPlus = (DecimalFormat) NumberFormat.getCurrencyInstance(Locale.US);
                 dollarFormatWithPlus.setPositivePrefix("+$");
-
-                /*
-                if (price > 0) {
-                    views.setTextColor(R.id.widget_change, getResources().getColor(R.color.material_green_700));
-                } else {
-                    views.setTextColor(R.id.widget_change, getResources().getColor(R.color.material_red_700));
-                }*/
 
                 views.setTextViewText(R.id.widget_symbol, symbol);
                 views.setTextViewText(R.id.widget_price, dollarFormat.format(price));
