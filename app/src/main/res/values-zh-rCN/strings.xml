@@ -43,6 +43,8 @@
     <string name="description_stock_symbol">股票代号</string>
     <string name="description_stock_price">股票价格</string>
     <string name="description_stock_change">价格变化</string>
+    <string name="detail_label">价格趋势</string>
+    <string name="widget_config_label">选择要显示的股票代码</string>
 
 
 </resources>
