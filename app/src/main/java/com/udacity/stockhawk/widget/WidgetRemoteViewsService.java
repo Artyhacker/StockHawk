@@ -1,38 +1,25 @@
 package com.udacity.stockhawk.widget;
 
-import android.app.PendingIntent;
-import android.app.TaskStackBuilder;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Binder;
-import android.util.Log;
 import android.widget.AdapterView;
 import android.widget.RemoteViews;
 import android.widget.RemoteViewsService;
 
 import com.udacity.stockhawk.R;
 import com.udacity.stockhawk.data.Contract;
-import com.udacity.stockhawk.data.PrefUtils;
-import com.udacity.stockhawk.ui.MainActivity;
 import com.udacity.stockhawk.ui.StockDetailActivity;
 
-import java.io.IOException;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
-import java.util.HashSet;
-import java.util.Iterator;
 import java.util.Locale;
-import java.util.Map;
-import java.util.Set;
-
-import yahoofinance.Stock;
-import yahoofinance.YahooFinance;
 
 /**
  * Created by dh on 17-2-10.
  */
 
-public class LargeWidgetRemoteViewsService extends RemoteViewsService {
+public class WidgetRemoteViewsService extends RemoteViewsService {
 
     private final String TAG = "RemoteViewsService";
     private DecimalFormat dollarFormatWithPlus;
@@ -81,7 +68,7 @@ public class LargeWidgetRemoteViewsService extends RemoteViewsService {
                     return null;
                 }
 
-                RemoteViews views = new RemoteViews(getPackageName(), R.layout.widget_large_item);
+                RemoteViews views = new RemoteViews(getPackageName(), R.layout.widget_stock_item);
 
                 String symbol = data.getString(Contract.Quote.POSITION_SYMBOL);
                 float price = data.getFloat(Contract.Quote.POSITION_PRICE);
@@ -111,7 +98,7 @@ public class LargeWidgetRemoteViewsService extends RemoteViewsService {
 
             @Override
             public RemoteViews getLoadingView() {
-                return new RemoteViews(getPackageName(), R.layout.widget_large_item);
+                return new RemoteViews(getPackageName(), R.layout.widget_stock_item);
             }
 
             @Override

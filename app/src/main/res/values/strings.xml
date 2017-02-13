@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:xliff="http://schemas.android.com/tools">
     <string name="app_name">Stock Hawk</string>
 
     <string name="pref_stocks_initialized_key" translatable="false">initialized</string>
@@ -45,5 +45,15 @@
     <string name="description_stock_change">Price change</string>
     <string name="detail_label">Price Trend</string>
     <string name="widget_config_label">Select stock symbol</string>
+
+    <string name="detail_point_describe_hint">Select point to view the details</string>
+    <string name="data_point_details">Data Details</string>
+    <string name="history_price_chart_description">History price chart</string>
+    <string name="detail_point_describe">
+        Date:
+        <xliff:g id = "date">%s</xliff:g>
+        , Price: $
+        <xliff:g id = "price">%.2f</xliff:g>
+    </string>
 
 </resources>

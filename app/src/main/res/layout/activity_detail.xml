@@ -3,13 +3,22 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <lecho.lib.hellocharts.view.LineChartView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/chart"
+        android:contentDescription="@string/history_price_chart_description"/>
+
     <TextView
+        android:id="@+id/detail_point_describe"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="这是DetailActivity!!"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/detail_symbol"/>
+        android:gravity="center"
+        android:padding="5dp"
+        android:textSize="18sp"
+        android:textColor="@color/material_red_700"
+        android:hint="@string/detail_point_describe_hint"
+        android:contentDescription="@string/data_point_details"/>
 
 </LinearLayout>
