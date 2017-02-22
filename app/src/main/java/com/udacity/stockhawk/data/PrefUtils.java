@@ -3,6 +3,7 @@ package com.udacity.stockhawk.data;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.udacity.stockhawk.R;
@@ -43,7 +44,12 @@ public final class PrefUtils {
         Set<String> stocks = getStocks(context);
         int stocksNum = stocks.size();
         if (add) {
-            stocks.add(symbol.toUpperCase());
+            Log.d("PrefUtils", "symbol: " + symbol);
+            //去除标点和空格
+            String symbol1 = symbol.replaceAll("\\W", "");
+            Log.d("PrefUtils", "symbol1: " + symbol1);
+
+            stocks.add(symbol1.toUpperCase());
             if (stocksNum == stocks.size()) {
                 Toast.makeText(context, R.string.toast_stock_already_exists, Toast.LENGTH_LONG).show();
                 PrefUtils.removeStock(context, symbol);
