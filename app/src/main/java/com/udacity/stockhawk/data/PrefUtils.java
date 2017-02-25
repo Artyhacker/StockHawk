@@ -49,6 +49,10 @@ public final class PrefUtils {
             String symbol1 = symbol.replaceAll("\\W", "");
             Log.d("PrefUtils", "symbol1: " + symbol1);
 
+            if(symbol1.isEmpty()) {
+                Toast.makeText(context, R.string.toast_symbol_error, Toast.LENGTH_LONG).show();
+                return;
+            }
             stocks.add(symbol1.toUpperCase());
             if (stocksNum == stocks.size()) {
                 Toast.makeText(context, R.string.toast_stock_already_exists, Toast.LENGTH_LONG).show();
@@ -61,6 +65,8 @@ public final class PrefUtils {
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
         SharedPreferences.Editor editor = prefs.edit();
+        editor.remove(key);
+        editor.apply();
         editor.putStringSet(key, stocks);
         editor.apply();
 
